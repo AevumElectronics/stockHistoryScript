@@ -5,7 +5,7 @@ import time
 
 # Configurazione
 API_KEY = '320466b042c54d53b58a1fcdb929a2f8'  # Inserisci qui la tua chiave API Twelve Data
-OUTPUT_DIR = 'dati_titoli'  # Cartella dove verranno salvati i JSON
+OUTPUT_DIR = 'data'  # Cartella dove verranno salvati i JSON
 INPUT_FILE = 'titoli.json'  # File JSON contenente i simboli e gli exchange
 
 # Crea la cartella di output se non esiste
