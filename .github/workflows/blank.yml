@@ -29,4 +29,4 @@ jobs:
 
     - name: Run Python script
       run: python mainscript.py # Sostituisci con il nome del tuo script
-      working-directory: ${{ github.workspace }}
+      working-directory: ${{ github.workspace }}/scripts
