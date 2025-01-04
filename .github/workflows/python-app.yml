@@ -44,8 +44,8 @@ jobs:
         python test.py
     - name: Commit data if changed
       run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
+        git config --global user.name 'AevumElectronics'
+        git config --global user.email 'aevumelectronics@gmail.com'
         git add dati_titoli/*
         git diff --quiet && git diff --staged --quiet || git commit -m "Add fetched data"
         git push
