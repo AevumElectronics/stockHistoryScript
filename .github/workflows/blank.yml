@@ -29,3 +29,14 @@ jobs:
 
     - name: Run Python script
       run: python scripts/mainScript.py # Sostituisci con il nome del tuo script
+
+    # New step to commit the fetched data
+    - name: Commit data
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add dati_titoli/*
+        git commit -m "Add fetched data"
+        git push
+
+
