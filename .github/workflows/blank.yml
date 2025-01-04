@@ -25,4 +25,4 @@ jobs:
           pip install requests
 
     - name: Run Python script
-      run: python mainScript.py # Sostituisci con il nome del tuo script
+      run: python /home/runner/work/stockHistory/stockHistory/mainScript.py # Sostituisci con il nome del tuo script
