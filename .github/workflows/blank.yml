@@ -28,5 +28,5 @@ jobs:
           pip install requests
 
     - name: Run Python script
-      run: python mainScript.py # Sostituisci con il nome del tuo script
+      run: python mainscript.py # Sostituisci con il nome del tuo script
       working-directory: ${{ github.workspace }}
