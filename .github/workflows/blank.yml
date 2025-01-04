@@ -3,7 +3,7 @@ name: Run Python Script
 on:
   schedule:
     # Esempio: esegui lo script ogni giorno alle 12:00 UTC
-    - cron: "30 22 * * *"
+    - cron: "15 21 * * *"
 
 jobs:
   run-script:
