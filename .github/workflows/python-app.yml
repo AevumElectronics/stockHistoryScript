@@ -41,7 +41,7 @@ jobs:
 
     - name: Run Python script
       run: |
-        python mainScript.py
+        python test.py
     - name: Commit data if changed
       run: |
         git config --global user.name 'github-actions'
