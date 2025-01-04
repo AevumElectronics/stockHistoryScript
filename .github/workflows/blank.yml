@@ -3,7 +3,8 @@ name: Run Python Script
 on:
   schedule:
     # Esempio: esegui lo script ogni giorno alle 12:00 UTC
-    - cron: "23 21 * * *"
+    - cron: "31 21 * * *"
+  workflow_dispatch: # This enables manual triggering
 
 jobs:
   run-script:
@@ -20,8 +21,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt # Installare i pacchetti necessari (se necessario)
+          python -m pip install --upgrade pip
+          pip install requests
 
     - name: Run Python script
       run: python mainScript.py # Sostituisci con il nome del tuo script
