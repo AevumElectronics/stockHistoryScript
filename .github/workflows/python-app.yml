@@ -41,7 +41,7 @@ jobs:
 
     - name: Run Python script
       run: |
-        python test.py
+        python mainscript.py
     - name: Commit data if changed
       run: |
         git config --global user.name 'AevumElectronics'
