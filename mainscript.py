@@ -6,7 +6,7 @@ import time
 # Configurazione
 API_KEY = '320466b042c54d53b58a1fcdb929a2f8'  # Inserisci qui la tua chiave API Twelve Data
 OUTPUT_DIR = 'data'  # Cartella dove verranno salvati i JSON
-INPUT_FILE = 'titoli.json'  # File JSON contenente i simboli e gli exchange
+INPUT_FILE = 'customSEP500.json'  # File JSON contenente i simboli e gli exchange
 
 # Crea la cartella di output se non esiste
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -69,8 +69,8 @@ def main():
     request_count = 0  # Contatore delle richieste API
 
     for i, titolo in enumerate(titoli):
-        symbol = titolo.get('SYMBOL')
-        exchange = titolo.get('EXCHANGE')
+        symbol = titolo.get('Symbol')
+        exchange = ''
 
         if not symbol or not exchange:
             print(f"Titolo non valido: {titolo}")
