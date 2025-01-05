@@ -72,7 +72,7 @@ def main():
         symbol = titolo.get('Symbol')
         exchange = ''
 
-        if not symbol or not exchange:
+        if not symbol:
             print(f"Titolo non valido: {titolo}")
             continue
 
