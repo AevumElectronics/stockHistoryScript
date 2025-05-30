@@ -4,18 +4,26 @@
         "interval": "1day",
         "currency": "USD",
         "exchange_timezone": "America/New_York",
-        "exchange": "NYSE",
-        "mic_code": "XNYS",
+        "exchange": "NASDAQ",
+        "mic_code": "XNGS",
         "type": "Common Stock"
     },
     "values": [
         {
+            "datetime": "2025-05-30",
+            "open": "143.059998",
+            "high": "144.23000",
+            "low": "143.059998",
+            "close": "143.75999",
+            "volume": "3198782"
+        },
+        {
             "datetime": "2025-05-29",
             "open": "142.22000",
-            "high": "144.30499",
+            "high": "144.31000",
             "low": "141.58000",
             "close": "143.84000",
-            "volume": "2611579"
+            "volume": "1716200"
         },
         {
             "datetime": "2025-05-28",
@@ -8000,14 +8008,6 @@
             "low": "129.57001",
             "close": "129.72000",
             "volume": "2484200"
-        },
-        {
-            "datetime": "2021-06-07",
-            "open": "130.66000",
-            "high": "131.24001",
-            "low": "129.74001",
-            "close": "131.080002",
-            "volume": "2515100"
         }
     ],
     "status": "ok"
