@@ -1,17 +1,19 @@
 # stock_calculations.py
+import numpy as np
+
 def calculate_moving_average(data, period, key='close'):
-    """Calculate the moving average for the given period using the specified key (e.g., 'close')."""
+    """Calculate the moving average for the given period."""
     if not data or len(data['values']) < period:
         return None
     try:
-        closes = [float(item[key]) for item in data['values'][:period]]  # Use most recent 'period' values
+        closes = [float(item[key]) for item in data['values'][:period]]
         return round(sum(closes) / len(closes), 2)
     except (KeyError, ValueError) as e:
         print(f"Error calculating moving average: {e}")
         return None
 
 def calculate_fibonacci_levels(data):
-    """Calculate Fibonacci retracement levels based on the highest high and lowest low."""
+    """Calculate Fibonacci retracement levels."""
     if not data or len(data['values']) < 2:
         return None
     try:
@@ -33,12 +35,78 @@ def calculate_fibonacci_levels(data):
         print(f"Error calculating Fibonacci levels: {e}")
         return None
 
+def calculate_rsi(data, period=14):
+    """Calculate Relative Strength Index (RSI)."""
+    if not data or len(data['values']) < period + 1:
+        return None
+    try:
+        closes = [float(item['close']) for item in data['values'][:period + 1]]
+        gains = [max(closes[i] - closes[i + 1], 0) for i in range(len(closes) - 1)]
+        losses = [max(closes[i + 1] - closes[i], 0) for i in range(len(closes) - 1)]
+        avg_gain = sum(gains) / period
+        avg_loss = sum(losses) / period
+        if avg_loss == 0:
+            return 100
+        rs = avg_gain / avg_loss
+        rsi = 100 - (100 / (1 + rs))
+        return round(rsi, 2)
+    except (KeyError, ValueError) as e:
+        print(f"Error calculating RSI: {e}")
+        return None
+
+def calculate_bollinger_bands(data, period=20, multiplier=2):
+    """Calculate Bollinger Bands."""
+    if not data or len(data['values']) < period:
+        return None
+    try:
+        closes = [float(item['close']) for item in data['values'][:period]]
+        sma = sum(closes) / period
+        std_dev = np.std(closes)
+        upper_band = sma + multiplier * std_dev
+        lower_band = sma - multiplier * std_dev
+        return {
+            'middle_band': round(sma, 2),
+            'upper_band': round(upper_band, 2),
+            'lower_band': round(lower_band, 2)
+        }
+    except (KeyError, ValueError) as e:
+        print(f"Error calculating Bollinger Bands: {e}")
+        return None
+
+def calculate_pivot_points(data):
+    """Calculate pivot points and support/resistance levels."""
+    if not data or len(data['values']) < 1:
+        return None
+    try:
+        latest = data['values'][0]  # Use the most recent day
+        high = float(latest['high'])
+        low = float(latest['low'])
+        close = float(latest['close'])
+        pivot = (high + low + close) / 3
+        r1 = 2 * pivot - low
+        s1 = 2 * pivot - high
+        r2 = pivot + (high - low)
+        s2 = pivot - (high - low)
+        return {
+            'pivot_point': round(pivot, 2),
+            'resistance_1': round(r1, 2),
+            'support_1': round(s1, 2),
+            'resistance_2': round(r2, 2),
+            'support_2': round(s2, 2)
+        }
+    except (KeyError, ValueError) as e:
+        print(f"Error calculating pivot points: {e}")
+        return None
+
 def perform_calculations(data):
-    """Perform all calculations and return them in a dictionary."""
+    """Perform all stock calculations."""
     if not data or 'values' not in data:
         return None
     return {
         '50_day_moving_average': calculate_moving_average(data, 50),
-        '200_week_moving_average': calculate_moving_average(data, 200 * 5),  # Approx 200 weeks in trading days
-        'fibonacci_levels': calculate_fibonacci_levels(data)
+        '200_week_moving_average': calculate_moving_average(data, 200 * 5),
+        'fibonacci_levels': calculate_fibonacci_levels(data),
+        'rsi': calculate_rsi(data, 14),
+        'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
+        'pivot_points': calculate_pivot_points(data)
     }
