@@ -2,6 +2,8 @@ import requests
 import os
 import json
 import time
+from stock_calculations import perform_calculations  # Import the external function
+
 
 # Configurazione
 API_KEY = '320466b042c54d53b58a1fcdb929a2f8'  # Inserisci qui la tua chiave API Twelve Data
@@ -52,6 +54,10 @@ def salva_dati_json(data, filename):
     if data is None:
         print(f"Nessun dato da salvare in {filename}")
         return
+
+
+    # Aggiungi i calcoli al dizionario dei dati
+    data['calculated'] = perform_calculations(data)
 
     # Salva i dati JSON direttamente nel file
     with open(filename, 'w') as f:
