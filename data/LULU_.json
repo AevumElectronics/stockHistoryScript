@@ -23,7 +23,7 @@
             "high": "252.24001",
             "low": "236.32001",
             "close": "246.30000",
-            "volume": "5342300"
+            "volume": "5344900"
         },
         {
             "datetime": "2025-07-01",
@@ -8010,5 +8010,30 @@
             "volume": "806000"
         }
     ],
-    "status": "ok"
+    "status": "ok",
+    "calculated": {
+        "50_day_moving_average": 278.01,
+        "200_week_moving_average": 351.93,
+        "fibonacci_levels": {
+            "0.0%": 516.39,
+            "23.6%": 446.43,
+            "38.2%": 403.16,
+            "50.0%": 368.18,
+            "61.8%": 333.2,
+            "100.0%": 219.97
+        },
+        "rsi": 50.64,
+        "bollinger_bands": {
+            "middle_band": 245.9,
+            "upper_band": 290.52,
+            "lower_band": 201.27
+        },
+        "pivot_points": {
+            "pivot_point": 247.88,
+            "resistance_1": 249.77,
+            "support_1": 245.8,
+            "resistance_2": 251.85,
+            "support_2": 243.91
+        }
+    }
 }
