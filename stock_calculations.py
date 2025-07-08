@@ -12,6 +12,28 @@ def calculate_moving_average(data, period, key='close'):
         print(f"Error calculating moving average: {e}")
         return None
 
+def calculate_slope(data, period, key='close'):
+    """
+    Calculate the slope of the moving average over the given period.
+    Slope = (latest MA - earliest MA) over the window.
+    """
+    if not data or len(data['values']) < period + 1:
+        return None
+    try:
+        moving_averages = []
+        for i in range(len(data['values']) - period + 1):
+            window = data['values'][i:i+period]
+            closes = [float(item[key]) for item in window]
+            ma = sum(closes) / len(closes)
+            moving_averages.append(ma)
+        # Slope: difference between last and first moving average in the window
+        slope = moving_averages[-1] - moving_averages[0]
+        return round(slope, 4)
+    except (KeyError, ValueError) as e:
+        print(f"Error calculating slope: {e}")
+        return None
+
+
 def calculate_fibonacci_levels(data):
     """Calculate Fibonacci retracement levels."""
     if not data or len(data['values']) < 2:
@@ -103,8 +125,10 @@ def perform_calculations(data):
     if not data or 'values' not in data:
         return None
     return {
-        '50_day_moving_average': calculate_moving_average(data, 50),
+        '50_week_moving_average': calculate_moving_average(data, 50),
+        '50_week_moving_average_slope':calculate_slope(data, 50),
         '200_week_moving_average': calculate_moving_average(data, 200 * 5),
+        '200_week_moving_average_slope':calculate_slope(data, 200)
         'fibonacci_levels': calculate_fibonacci_levels(data),
         'rsi': calculate_rsi(data, 14),
         'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
