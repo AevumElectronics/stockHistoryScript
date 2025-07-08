@@ -11,11 +11,11 @@
     "values": [
         {
             "datetime": "2025-07-07",
-            "open": "33.5",
+            "open": "33.49000",
             "high": "33.59000",
-            "low": "32.97350",
+            "low": "32.97000",
             "close": "33.049999",
-            "volume": "6019823"
+            "volume": "11868800"
         },
         {
             "datetime": "2025-07-03",
@@ -8012,8 +8012,10 @@
     ],
     "status": "ok",
     "calculated": {
-        "50_day_moving_average": 31.05,
+        "50_week_moving_average": 31.05,
+        "50_week_moving_average_slope": 1.2024,
         "200_week_moving_average": 32.69,
+        "200_week_moving_average_slope": 2.1276,
         "fibonacci_levels": {
             "0.0%": 40.12,
             "23.6%": 36.74,
@@ -8033,7 +8035,7 @@
             "resistance_1": 33.44,
             "support_1": 32.82,
             "resistance_2": 33.82,
-            "support_2": 32.59
+            "support_2": 32.58
         }
     }
 }

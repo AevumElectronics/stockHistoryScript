@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2025-07-07",
+            "open": "90.20000",
+            "high": "90.82000",
+            "low": "89.97000",
+            "close": "90.55000",
+            "volume": "2426500"
+        },
+        {
             "datetime": "2025-07-03",
             "open": "89.69000",
             "high": "90.35000",
@@ -8000,40 +8008,34 @@
             "low": "59.45667",
             "close": "59.69667",
             "volume": "2670900"
-        },
-        {
-            "datetime": "2021-07-12",
-            "open": "58.59333",
-            "high": "60.33000",
-            "low": "58.59333",
-            "close": "59.88333",
-            "volume": "3442800"
         }
     ],
     "status": "ok",
     "calculated": {
-        "50_day_moving_average": 82.81,
-        "200_week_moving_average": 62.73,
+        "50_week_moving_average": 83.15,
+        "50_week_moving_average_slope": -19.8944,
+        "200_week_moving_average": 62.76,
+        "200_week_moving_average_slope": -15.3151,
         "fibonacci_levels": {
-            "0.0%": 90.35,
-            "23.6%": 80.07,
-            "38.2%": 73.7,
-            "50.0%": 68.56,
-            "61.8%": 63.42,
+            "0.0%": 90.82,
+            "23.6%": 80.42,
+            "38.2%": 73.99,
+            "50.0%": 68.8,
+            "61.8%": 63.6,
             "100.0%": 46.77
         },
-        "rsi": 67.83,
+        "rsi": 80.77,
         "bollinger_bands": {
-            "middle_band": 87.2,
-            "upper_band": 90.41,
-            "lower_band": 84.0
+            "middle_band": 87.53,
+            "upper_band": 90.7,
+            "lower_band": 84.36
         },
         "pivot_points": {
-            "pivot_point": 89.97,
-            "resistance_1": 90.45,
-            "support_1": 89.6,
-            "resistance_2": 90.82,
-            "support_2": 89.12
+            "pivot_point": 90.45,
+            "resistance_1": 90.92,
+            "support_1": 90.07,
+            "resistance_2": 91.3,
+            "support_2": 89.6
         }
     }
 }
