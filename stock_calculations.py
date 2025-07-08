@@ -128,7 +128,7 @@ def perform_calculations(data):
         '50_week_moving_average': calculate_moving_average(data, 50),
         '50_week_moving_average_slope':calculate_slope(data, 50),
         '200_week_moving_average': calculate_moving_average(data, 200 * 5),
-        '200_week_moving_average_slope':calculate_slope(data, 200)
+        '200_week_moving_average_slope':calculate_slope(data, 200),
         'fibonacci_levels': calculate_fibonacci_levels(data),
         'rsi': calculate_rsi(data, 14),
         'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
