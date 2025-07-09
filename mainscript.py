@@ -49,7 +49,7 @@ def recupera_dati_titolo(symbol, exchange):
 
     return data
 
-def salva_dati_json(data, filename):
+def salva_dati_json2(data, filename):
     """Salva i dati in un file JSON."""
     if data is None:
         print(f"Nessun dato da salvare in {filename}")
@@ -63,6 +63,41 @@ def salva_dati_json(data, filename):
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
     print(f"Dati salvati in {filename}")
+
+def salva_dati_json(data, filename):
+    """Salva i dati in un file JSON e, se isInteresting è True, in un file generale per i titoli interessanti."""
+    if data is None:
+        print(f"Nessun dato da salvare in {filename}")
+        return
+
+    # Aggiungi i calcoli al dizionario dei dati
+    data['calculated'] = perform_calculations(data)
+
+    # Salva i dati JSON direttamente nel file specifico per il titolo
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+    print(f"Dati salvati in {filename}")
+
+    # Se isInteresting è True, salva i calcoli in interesting_stocks.json
+    if data['calculated'] and data['calculated'].get('isInteresting', False):
+        symbol = os.path.basename(filename).split('_')[0]  # Estrai il simbolo dal nome del file
+        interesting_file = 'interesting_stocks.json'
+        
+        # Carica il file interesting_stocks.json se esiste, altrimenti crea un dizionario vuoto
+        interesting_data = {}
+        try:
+            with open(interesting_file, 'r') as f:
+                interesting_data = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass  # File non esiste o non valido, inizia con un dizionario vuoto
+
+        # Aggiungi o aggiorna i calcoli per il simbolo corrente
+        interesting_data[symbol] = data['calculated']
+
+        # Salva il file interesting_stocks.json
+        with open(interesting_file, 'w') as f:
+            json.dump(interesting_data, f, indent=4)
+        print(f"Dati interessanti per {symbol} salvati in {interesting_file}")
 
 def main():
     # Carica i titoli dal file JSON
