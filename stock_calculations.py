@@ -1,6 +1,8 @@
 # stock_calculations.py
 import numpy as np
 
+
+
 def calculate_moving_average(data, period, key='close'):
     """Calculate the moving average for the given period."""
     if not data or len(data['values']) < period:
@@ -95,6 +97,39 @@ def calculate_bollinger_bands(data, period=20, multiplier=2):
         print(f"Error calculating Bollinger Bands: {e}")
         return None
 
+def calculate_macd(data, short_period=12, long_period=26, signal_period=9):
+    """Calculate MACD (Moving Average Convergence Divergence)."""
+    if not data or 'values' not in data or len(data['values']) < long_period + signal_period:
+        return None
+    
+    closes = [entry['close'] for entry in data['values']]
+    
+    # Calculate EMAs
+    def ema(prices, period):
+        alpha = 2 / (period + 1)
+        ema_values = [prices[0]]
+        for price in prices[1:]:
+            ema_values.append(price * alpha + ema_values[-1] * (1 - alpha))
+        return ema_values
+    
+    short_ema = ema(closes, short_period)[-long_period:]
+    long_ema = ema(closes, long_period)
+    
+    # Calculate MACD line
+    macd_line = [s - l for s, l in zip(short_ema, long_ema)]
+    
+    # Calculate Signal line
+    signal_line = ema(macd_line, signal_period)
+    
+    # Calculate Histogram
+    histogram = [m - s for m, s in zip(macd_line[-len(signal_line):], signal_line)]
+    
+    return {
+        'macd_line': macd_line[-1],
+        'signal_line': signal_line[-1],
+        'histogram': histogram[-1]
+    }
+
 def calculate_pivot_points(data):
     """Calculate pivot points and support/resistance levels."""
     if not data or len(data['values']) < 1:
@@ -124,13 +159,28 @@ def perform_calculations(data):
     """Perform all stock calculations."""
     if not data or 'values' not in data:
         return None
+
+
+    # Get the latest price and last 10 days' prices
+    current_price = data['values'][-1]['close']
+    recent_prices = [entry['close'] for entry in data['values'][-10:]]
+
+    # Calculate 200-week moving average
+    ma_200_week = calculate_moving_average(data, 200 * 5)
+
+    # Determine isInteresting
+    is_interesting = any(price > ma_200_week for price in ([current_price] + recent_prices)) if ma_200_week else False
+    
+    
     return {
         '50_week_moving_average': calculate_moving_average(data, 50),
         '50_week_moving_average_slope':calculate_slope(data, 50),
-        '200_week_moving_average': calculate_moving_average(data, 200 * 5),
+        '200_week_moving_average': ma_200_week,
         '200_week_moving_average_slope':calculate_slope(data, 200),
         'fibonacci_levels': calculate_fibonacci_levels(data),
         'rsi': calculate_rsi(data, 14),
         'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
-        'pivot_points': calculate_pivot_points(data)
+        'macd': calculate_macd(data, 12, 26, 9), 
+        'pivot_points': calculate_pivot_points(data),
+        'isInteresting': is_interesting
     }
