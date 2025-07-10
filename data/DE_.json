@@ -10,12 +10,28 @@
     },
     "values": [
         {
+            "datetime": "2025-07-10",
+            "open": "511",
+            "high": "528.79",
+            "low": "511",
+            "close": "521.43",
+            "volume": "205062"
+        },
+        {
+            "datetime": "2025-07-09",
+            "open": "510.98001",
+            "high": "512.070007",
+            "low": "499.51001",
+            "close": "509.32999",
+            "volume": "1152400"
+        },
+        {
             "datetime": "2025-07-08",
             "open": "507.37000",
             "high": "514.72998",
             "low": "507.34000",
-            "close": "508.95001",
-            "volume": "918778"
+            "close": "508.91000",
+            "volume": "1285000"
         },
         {
             "datetime": "2025-07-07",
@@ -7992,30 +8008,14 @@
             "low": "328.92999",
             "close": "334.95001",
             "volume": "1848656"
-        },
-        {
-            "datetime": "2021-07-16",
-            "open": "347.62000",
-            "high": "348.46469",
-            "low": "342",
-            "close": "342.48999",
-            "volume": "1154041"
-        },
-        {
-            "datetime": "2021-07-15",
-            "open": "342.89999",
-            "high": "347.71500",
-            "low": "342.31000",
-            "close": "346.10001",
-            "volume": "1516232"
         }
     ],
     "status": "ok",
     "calculated": {
-        "50_week_moving_average": 505.06,
-        "50_week_moving_average_slope": -141.689,
-        "200_week_moving_average": 395.8,
-        "200_week_moving_average_slope": -89.1855,
+        "50_week_moving_average": 507.28,
+        "50_week_moving_average_slope": -143.6518,
+        "200_week_moving_average": 396.14,
+        "200_week_moving_average_slope": -89.9342,
         "fibonacci_levels": {
             "0.0%": 533.78,
             "23.6%": 474.79,
@@ -8024,18 +8024,24 @@
             "61.8%": 379.3,
             "100.0%": 283.81
         },
-        "rsi": 36.57,
+        "rsi": 47.35,
         "bollinger_bands": {
-            "middle_band": 515.64,
-            "upper_band": 527.67,
-            "lower_band": 503.62
+            "middle_band": 515.3,
+            "upper_band": 527.62,
+            "lower_band": 502.99
+        },
+        "macd": {
+            "macd_line": -163.1660856615694,
+            "signal_line": -157.30868607897057,
+            "histogram": -5.857399582598845
         },
         "pivot_points": {
-            "pivot_point": 510.34,
-            "resistance_1": 513.34,
-            "support_1": 505.95,
-            "resistance_2": 517.73,
-            "support_2": 502.95
-        }
+            "pivot_point": 520.41,
+            "resistance_1": 529.81,
+            "support_1": 512.02,
+            "resistance_2": 538.2,
+            "support_2": 502.62
+        },
+        "isInteresting": false
     }
 }
