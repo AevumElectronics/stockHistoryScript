@@ -102,7 +102,9 @@ def calculate_macd(data, short_period=12, long_period=26, signal_period=9):
     if not data or 'values' not in data or len(data['values']) < long_period + signal_period:
         return None
     
-    closes = [entry['close'] for entry in data['values']]
+   
+    closes = [float(entry['close']) for entry in data['values']]
+
     
     # Calculate EMAs
     def ema(prices, period):
@@ -162,8 +164,10 @@ def perform_calculations(data):
 
 
     # Get the latest price and last 10 days' prices
-    current_price = data['values'][-1]['close']
-    recent_prices = [entry['close'] for entry in data['values'][-10:]]
+    #current_price = data['values'][-1]['close']
+    #recent_prices = [entry['close'] for entry in data['values'][-10:]]
+    current_price = float(data['values'][-1]['close'])
+    recent_prices = [float(entry['close']) for entry in data['values'][-10:]]
 
     # Calculate 200-week moving average
     ma_200_week = calculate_moving_average(data, 200 * 5)
