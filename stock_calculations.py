@@ -184,7 +184,7 @@ def perform_calculations(data):
         'fibonacci_levels': calculate_fibonacci_levels(data),
         'rsi': calculate_rsi(data, 14),
         'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
-        'macd': calculate_macd(data, 12, 26, 9), 
+        #'macd': calculate_macd(data, 12, 26, 9), 
         'pivot_points': calculate_pivot_points(data),
         'isInteresting': is_interesting
     }
