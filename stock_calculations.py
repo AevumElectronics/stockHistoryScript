@@ -101,36 +101,46 @@ def calculate_macd(data, short_period=12, long_period=26, signal_period=9):
     """Calculate MACD (Moving Average Convergence Divergence)."""
     if not data or 'values' not in data or len(data['values']) < long_period + signal_period:
         return None
-    
-   
-    closes = [float(entry['close']) for entry in data['values']]
 
-    
-    # Calculate EMAs
-    def ema(prices, period):
-        alpha = 2 / (period + 1)
-        ema_values = [prices[0]]
-        for price in prices[1:]:
-            ema_values.append(price * alpha + ema_values[-1] * (1 - alpha))
-        return ema_values
-    
-    short_ema = ema(closes, short_period)[-long_period:]
-    long_ema = ema(closes, long_period)
-    
-    # Calculate MACD line
-    macd_line = [s - l for s, l in zip(short_ema, long_ema)]
-    
-    # Calculate Signal line
-    signal_line = ema(macd_line, signal_period)
-    
-    # Calculate Histogram
-    histogram = [m - s for m, s in zip(macd_line[-len(signal_line):], signal_line)]
-    
-    return {
-        'macd_line': macd_line[-1],
-        'signal_line': signal_line[-1],
-        'histogram': histogram[-1]
-    }
+    try:
+        # Parse closes safely
+        closes = []
+        for entry in data['values']:
+            try:
+                closes.append(float(entry['close']))
+            except (ValueError, KeyError):
+                continue  # Skip malformed entries
+
+        if len(closes) < long_period + signal_period:
+            return None
+
+        # Calculate EMAs
+        def ema(prices, period):
+            alpha = 2 / (period + 1)
+            ema_values = [prices[0]]
+            for price in prices[1:]:
+                ema_values.append(price * alpha + ema_values[-1] * (1 - alpha))
+            return ema_values
+
+        short_ema = ema(closes, short_period)[-len(closes) + long_period:]
+        long_ema = ema(closes, long_period)
+
+        # Trim to matching lengths
+        min_len = min(len(short_ema), len(long_ema))
+        macd_line = [s - l for s, l in zip(short_ema[-min_len:], long_ema[-min_len:])]
+        signal_line = ema(macd_line, signal_period)
+
+        histogram = [m - s for m, s in zip(macd_line[-len(signal_line):], signal_line)]
+
+        return {
+            'macd_line': round(macd_line[-1], 4),
+            'signal_line': round(signal_line[-1], 4),
+            'histogram': round(histogram[-1], 4)
+        }
+
+    except Exception as e:
+        print(f"Error calculating MACD: {e}")
+        return None
 
 def calculate_pivot_points(data):
     """Calculate pivot points and support/resistance levels."""
