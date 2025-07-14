@@ -46,6 +46,6 @@ jobs:
       run: |
         git config --global user.name 'AevumElectronics'
         git config --global user.email 'aevumelectronics@gmail.com'
-        git add data/*
+        git add .
         git diff --quiet && git diff --staged --quiet || git commit -m "Add fetched data"
         git push origin main 
