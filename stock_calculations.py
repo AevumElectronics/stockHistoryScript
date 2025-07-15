@@ -183,7 +183,7 @@ def perform_calculations(data):
     ma_200_week = calculate_moving_average(data, 200 * 5)
 
     # Determine isInteresting
-    is_interesting = any(price > ma_200_week for price in ([current_price] + recent_prices)) if ma_200_week else False
+    is_interesting = any(price < ma_200_week for price in ([current_price] + recent_prices)) if ma_200_week else False
     
     
     return {
