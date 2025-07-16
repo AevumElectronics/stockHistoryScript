@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2025-07-15",
+            "open": "36.26000",
+            "high": "36.32000",
+            "low": "35.52000",
+            "close": "35.90000",
+            "volume": "4052300"
+        },
+        {
             "datetime": "2025-07-14",
             "open": "36.33000",
             "high": "36.64000",
@@ -8000,22 +8008,14 @@
             "low": "30.049999",
             "close": "30.45000",
             "volume": "3354200"
-        },
-        {
-            "datetime": "2021-07-20",
-            "open": "28.90000",
-            "high": "29.94000",
-            "low": "28.73000",
-            "close": "29.70000",
-            "volume": "3720100"
         }
     ],
     "status": "ok",
     "calculated": {
-        "50_week_moving_average": 35.14,
-        "50_week_moving_average_slope": -3.0386,
-        "200_week_moving_average": 38.67,
-        "200_week_moving_average_slope": 15.2548,
+        "50_week_moving_average": 35.25,
+        "50_week_moving_average_slope": -3.0114,
+        "200_week_moving_average": 38.68,
+        "200_week_moving_average_slope": 15.3904,
         "fibonacci_levels": {
             "0.0%": 79.28,
             "23.6%": 65.85,
@@ -8024,18 +8024,23 @@
             "61.8%": 44.1,
             "100.0%": 22.36
         },
-        "rsi": 50.07,
+        "rsi": 52.65,
         "bollinger_bands": {
             "middle_band": 36.37,
             "upper_band": 37.89,
-            "lower_band": 34.85
+            "lower_band": 34.86
+        },
+        "macd": {
+            "macd_line": -0.7095,
+            "signal_line": -0.6799,
+            "histogram": -0.0296
         },
         "pivot_points": {
-            "pivot_point": 36.17,
-            "resistance_1": 36.52,
-            "support_1": 35.7,
-            "resistance_2": 36.99,
-            "support_2": 35.35
+            "pivot_point": 35.91,
+            "resistance_1": 36.31,
+            "support_1": 35.51,
+            "resistance_2": 36.71,
+            "support_2": 35.11
         },
         "isInteresting": true
     }

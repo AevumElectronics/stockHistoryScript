@@ -10,12 +10,20 @@
     },
     "values": [
         {
+            "datetime": "2025-07-15",
+            "open": "156.28999",
+            "high": "156.71001",
+            "low": "154.12000",
+            "close": "154.30000",
+            "volume": "6461700"
+        },
+        {
             "datetime": "2025-07-14",
             "open": "156.42000",
             "high": "156.5",
             "low": "153.48000",
             "close": "154.28999",
-            "volume": "7372200"
+            "volume": "7382600"
         },
         {
             "datetime": "2025-07-11",
@@ -8000,22 +8008,14 @@
             "low": "139.64999",
             "close": "142.17000",
             "volume": "6161900"
-        },
-        {
-            "datetime": "2021-07-20",
-            "open": "139.020004",
-            "high": "140.42000",
-            "low": "137.20000",
-            "close": "139.55000",
-            "volume": "6020400"
         }
     ],
     "status": "ok",
     "calculated": {
-        "50_week_moving_average": 152.19,
-        "50_week_moving_average_slope": -9.587,
-        "200_week_moving_average": 146.01,
-        "200_week_moving_average_slope": -2.7465,
+        "50_week_moving_average": 152.57,
+        "50_week_moving_average_slope": -10.1742,
+        "200_week_moving_average": 146.02,
+        "200_week_moving_average_slope": -2.6358,
         "fibonacci_levels": {
             "0.0%": 230.63,
             "23.6%": 200.15,
@@ -8024,18 +8024,23 @@
             "61.8%": 150.81,
             "100.0%": 101.47
         },
-        "rsi": 52.89,
+        "rsi": 45.94,
         "bollinger_bands": {
-            "middle_band": 157.17,
-            "upper_band": 162.95,
-            "lower_band": 151.39
+            "middle_band": 157.15,
+            "upper_band": 162.97,
+            "lower_band": 151.33
+        },
+        "macd": {
+            "macd_line": 0.0002,
+            "signal_line": 0.8583,
+            "histogram": -0.8581
         },
         "pivot_points": {
-            "pivot_point": 154.76,
-            "resistance_1": 156.03,
-            "support_1": 153.01,
-            "resistance_2": 157.78,
-            "support_2": 151.74
+            "pivot_point": 155.04,
+            "resistance_1": 155.97,
+            "support_1": 153.38,
+            "resistance_2": 157.63,
+            "support_2": 152.45
         },
         "isInteresting": true
     }

@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2025-07-15",
+            "open": "91.040001",
+            "high": "91.21000",
+            "low": "89.72000",
+            "close": "90.010002",
+            "volume": "1251800"
+        },
+        {
             "datetime": "2025-07-14",
             "open": "91.019997",
             "high": "91.99000",
@@ -8000,22 +8008,14 @@
             "low": "83.55000",
             "close": "83.64000",
             "volume": "489000"
-        },
-        {
-            "datetime": "2021-07-20",
-            "open": "84.61000",
-            "high": "86.029999",
-            "low": "84.37000",
-            "close": "84.87000",
-            "volume": "718400"
         }
     ],
     "status": "ok",
     "calculated": {
-        "50_week_moving_average": 90.52,
-        "50_week_moving_average_slope": -12.088,
+        "50_week_moving_average": 90.45,
+        "50_week_moving_average_slope": -12.2694,
         "200_week_moving_average": 77.95,
-        "200_week_moving_average_slope": -17.388,
+        "200_week_moving_average_slope": -17.4451,
         "fibonacci_levels": {
             "0.0%": 96.5,
             "23.6%": 87.66,
@@ -8024,18 +8024,23 @@
             "61.8%": 73.34,
             "100.0%": 59.03
         },
-        "rsi": 59.19,
+        "rsi": 49.17,
         "bollinger_bands": {
             "middle_band": 89.76,
             "upper_band": 91.57,
             "lower_band": 87.95
         },
+        "macd": {
+            "macd_line": 1.9058,
+            "signal_line": 1.9513,
+            "histogram": -0.0454
+        },
         "pivot_points": {
-            "pivot_point": 91.27,
-            "resistance_1": 92.0,
-            "support_1": 90.54,
-            "resistance_2": 92.73,
-            "support_2": 89.81
+            "pivot_point": 90.31,
+            "resistance_1": 90.91,
+            "support_1": 89.42,
+            "resistance_2": 91.8,
+            "support_2": 88.82
         },
         "isInteresting": false
     }

@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2025-07-15",
+            "open": "38.15000",
+            "high": "38.33000",
+            "low": "37.53000",
+            "close": "37.72000",
+            "volume": "4456600"
+        },
+        {
             "datetime": "2025-07-14",
             "open": "37.75",
             "high": "38.16000",
@@ -8000,22 +8008,14 @@
             "low": "38.62000",
             "close": "39.86000",
             "volume": "5706100"
-        },
-        {
-            "datetime": "2021-07-20",
-            "open": "36.69000",
-            "high": "38.78000",
-            "low": "36.37000",
-            "close": "38.39000",
-            "volume": "6011300"
         }
     ],
     "status": "ok",
     "calculated": {
-        "50_week_moving_average": 33.69,
-        "50_week_moving_average_slope": 7.0,
+        "50_week_moving_average": 33.83,
+        "50_week_moving_average_slope": 6.972,
         "200_week_moving_average": 39.2,
-        "200_week_moving_average_slope": 8.1722,
+        "200_week_moving_average_slope": 8.1836,
         "fibonacci_levels": {
             "0.0%": 51.35,
             "23.6%": 45.2,
@@ -8024,18 +8024,23 @@
             "61.8%": 35.25,
             "100.0%": 25.3
         },
-        "rsi": 77.68,
+        "rsi": 71.41,
         "bollinger_bands": {
-            "middle_band": 35.52,
-            "upper_band": 39.66,
-            "lower_band": 31.38
+            "middle_band": 35.82,
+            "upper_band": 39.68,
+            "lower_band": 31.97
+        },
+        "macd": {
+            "macd_line": -0.5511,
+            "signal_line": -0.8458,
+            "histogram": 0.2947
         },
         "pivot_points": {
-            "pivot_point": 37.85,
-            "resistance_1": 38.42,
-            "support_1": 37.55,
-            "resistance_2": 38.72,
-            "support_2": 36.98
+            "pivot_point": 37.86,
+            "resistance_1": 38.19,
+            "support_1": 37.39,
+            "resistance_2": 38.66,
+            "support_2": 37.06
         },
         "isInteresting": true
     }

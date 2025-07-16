@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2025-07-15",
+            "open": "229",
+            "high": "229.13000",
+            "low": "225.75999",
+            "close": "225.84000",
+            "volume": "1188900"
+        },
+        {
             "datetime": "2025-07-14",
             "open": "225.32001",
             "high": "229.5",
@@ -8000,22 +8008,14 @@
             "low": "144.59000",
             "close": "144.85001",
             "volume": "976300"
-        },
-        {
-            "datetime": "2021-07-20",
-            "open": "143.95000",
-            "high": "146.39000",
-            "low": "143.91000",
-            "close": "145.17000",
-            "volume": "1669500"
         }
     ],
     "status": "ok",
     "calculated": {
-        "50_week_moving_average": 232.3,
-        "50_week_moving_average_slope": -81.1636,
-        "200_week_moving_average": 180.35,
-        "200_week_moving_average_slope": -66.9476,
+        "50_week_moving_average": 232.15,
+        "50_week_moving_average_slope": -80.8838,
+        "200_week_moving_average": 180.43,
+        "200_week_moving_average_slope": -66.9534,
         "fibonacci_levels": {
             "0.0%": 242.58,
             "23.6%": 218.04,
@@ -8024,18 +8024,23 @@
             "61.8%": 178.31,
             "100.0%": 138.58
         },
-        "rsi": 39.63,
+        "rsi": 35.68,
         "bollinger_bands": {
-            "middle_band": 229.48,
-            "upper_band": 237.1,
-            "lower_band": 221.86
+            "middle_band": 228.95,
+            "upper_band": 236.0,
+            "lower_band": 221.89
+        },
+        "macd": {
+            "macd_line": -1.786,
+            "signal_line": -1.649,
+            "histogram": -0.1371
         },
         "pivot_points": {
-            "pivot_point": 228.04,
-            "resistance_1": 230.76,
-            "support_1": 226.58,
-            "resistance_2": 232.22,
-            "support_2": 223.86
+            "pivot_point": 226.91,
+            "resistance_1": 228.06,
+            "support_1": 224.69,
+            "resistance_2": 230.28,
+            "support_2": 223.54
         },
         "isInteresting": true
     }
