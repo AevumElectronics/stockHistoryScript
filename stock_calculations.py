@@ -1,7 +1,4 @@
-# stock_calculations.py
 import numpy as np
-
-
 
 def calculate_moving_average(data, period, key='close'):
     """Calculate the moving average for the given period."""
@@ -34,7 +31,6 @@ def calculate_slope(data, period, key='close'):
     except (KeyError, ValueError) as e:
         print(f"Error calculating slope: {e}")
         return None
-
 
 def calculate_fibonacci_levels(data):
     """Calculate Fibonacci retracement levels."""
@@ -103,12 +99,12 @@ def calculate_macd(data, short_period=12, long_period=26, signal_period=9):
         return None
 
     try:
-        # Parse closes safely
+        # Parse closes safely - ensure they are all floats
         closes = []
         for entry in data['values']:
             try:
                 closes.append(float(entry['close']))
-            except (ValueError, KeyError):
+            except (ValueError, KeyError, TypeError):
                 continue  # Skip malformed entries
 
         if len(closes) < long_period + signal_period:
@@ -116,21 +112,49 @@ def calculate_macd(data, short_period=12, long_period=26, signal_period=9):
 
         # Calculate EMAs
         def ema(prices, period):
+            if not prices or len(prices) < period:
+                return []
+            
             alpha = 2 / (period + 1)
-            ema_values = [prices[0]]
+            ema_values = [prices[0]]  # Start with first price
+            
             for price in prices[1:]:
-                ema_values.append(price * alpha + ema_values[-1] * (1 - alpha))
+                # Ensure price is a float
+                try:
+                    price_float = float(price)
+                    ema_value = price_float * alpha + ema_values[-1] * (1 - alpha)
+                    ema_values.append(ema_value)
+                except (ValueError, TypeError):
+                    continue
+            
             return ema_values
 
-        short_ema = ema(closes, short_period)[-len(closes) + long_period:]
+        # Calculate short and long EMAs
+        short_ema = ema(closes, short_period)
         long_ema = ema(closes, long_period)
 
-        # Trim to matching lengths
-        min_len = min(len(short_ema), len(long_ema))
-        macd_line = [s - l for s, l in zip(short_ema[-min_len:], long_ema[-min_len:])]
-        signal_line = ema(macd_line, signal_period)
+        # Ensure we have enough data
+        if len(short_ema) < long_period or len(long_ema) < long_period:
+            return None
 
-        histogram = [m - s for m, s in zip(macd_line[-len(signal_line):], signal_line)]
+        # Align the EMAs (both should start from the same point)
+        # Take the last len(long_ema) values from short_ema
+        if len(short_ema) > len(long_ema):
+            short_ema = short_ema[-len(long_ema):]
+        
+        # Calculate MACD line
+        macd_line = [s - l for s, l in zip(short_ema, long_ema)]
+        
+        # Calculate signal line
+        signal_line = ema(macd_line, signal_period)
+        
+        if not signal_line:
+            return None
+
+        # Calculate histogram
+        # Align macd_line with signal_line
+        aligned_macd = macd_line[-len(signal_line):]
+        histogram = [m - s for m, s in zip(aligned_macd, signal_line)]
 
         return {
             'macd_line': round(macd_line[-1], 4),
@@ -172,29 +196,29 @@ def perform_calculations(data):
     if not data or 'values' not in data:
         return None
 
+    try:
+        # Get the latest price and last 10 days' prices
+        current_price = float(data['values'][-1]['close'])
+        recent_prices = [float(entry['close']) for entry in data['values'][-10:]]
 
-    # Get the latest price and last 10 days' prices
-    #current_price = data['values'][-1]['close']
-    #recent_prices = [entry['close'] for entry in data['values'][-10:]]
-    current_price = float(data['values'][-1]['close'])
-    recent_prices = [float(entry['close']) for entry in data['values'][-10:]]
+        # Calculate 200-week moving average
+        ma_200_week = calculate_moving_average(data, 200 * 5)
 
-    # Calculate 200-week moving average
-    ma_200_week = calculate_moving_average(data, 200 * 5)
-
-    # Determine isInteresting
-    is_interesting = any(price < ma_200_week for price in ([current_price] + recent_prices)) if ma_200_week else False
-    
-    
-    return {
-        '50_week_moving_average': calculate_moving_average(data, 50),
-        '50_week_moving_average_slope':calculate_slope(data, 50),
-        '200_week_moving_average': ma_200_week,
-        '200_week_moving_average_slope':calculate_slope(data, 200),
-        'fibonacci_levels': calculate_fibonacci_levels(data),
-        'rsi': calculate_rsi(data, 14),
-        'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
-        #'macd': calculate_macd(data, 12, 26, 9), 
-        'pivot_points': calculate_pivot_points(data),
-        'isInteresting': is_interesting
-    }
+        # Determine isInteresting
+        is_interesting = any(price < ma_200_week for price in ([current_price] + recent_prices)) if ma_200_week else False
+        
+        return {
+            '50_week_moving_average': calculate_moving_average(data, 50),
+            '50_week_moving_average_slope': calculate_slope(data, 50),
+            '200_week_moving_average': ma_200_week,
+            '200_week_moving_average_slope': calculate_slope(data, 200),
+            'fibonacci_levels': calculate_fibonacci_levels(data),
+            'rsi': calculate_rsi(data, 14),
+            'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
+            'macd': calculate_macd(data, 12, 26, 9), 
+            'pivot_points': calculate_pivot_points(data),
+            'isInteresting': is_interesting
+        }
+    except Exception as e:
+        print(f"Error in perform_calculations: {e}")
+        return None
