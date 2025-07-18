@@ -213,10 +213,10 @@ def perform_calculations(data):
             '200_week_moving_average': ma_200_week,
             '200_week_moving_average_slope': calculate_slope(data, 200),
             'fibonacci_levels': calculate_fibonacci_levels(data),
-            'rsi': calculate_rsi(data, 14),
-            'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
-            'macd': calculate_macd(data, 12, 26, 9), 
-            'pivot_points': calculate_pivot_points(data),
+            #'rsi': calculate_rsi(data, 14),
+            #'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
+            #'macd': calculate_macd(data, 12, 26, 9), 
+            #'pivot_points': calculate_pivot_points(data),
             'isInteresting': is_interesting
         }
     except Exception as e:
