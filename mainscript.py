@@ -2,7 +2,7 @@ import requests
 import os
 import json
 import time
-from stock_calculations import perform_calculations  # Import the external function
+from stock_calculations2 import perform_calculations  # Import the external function
 
 
 # Configurazione
