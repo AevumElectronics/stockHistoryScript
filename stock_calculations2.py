@@ -4,7 +4,9 @@ from formulas.moving_average import calculate_moving_average
 from formulas.slope import calculate_slope
 from formulas.fibonacci_levels import calculate_fibonacci_levels
 from formulas.exponential_moving_average import calculate_exponential_moving_average 
-
+from formulas.rsi import calculate_rsi
+from formulas.macd import calculate_macd
+from formulas.bollinger_bands import calculate_bollinger_bands
 
 def perform_calculations(data):
     """Perform all stock calculations."""
