@@ -3,6 +3,8 @@ import numpy as np  # Kept as in original, even if not used
 from formulas.moving_average import calculate_moving_average
 from formulas.slope import calculate_slope
 from formulas.fibonacci_levels import calculate_fibonacci_levels
+from formulas.exponential_moving_average import calculate_exponential_moving_average 
+
 
 def perform_calculations(data):
     """Perform all stock calculations."""
@@ -23,8 +25,10 @@ def perform_calculations(data):
         return {
             '50_week_moving_average': calculate_moving_average(data, 50),
             '50_week_moving_average_slope': calculate_slope(data, 50),
+            '50_week_ema': calculate_exponential_moving_average(data, 50),  # Nuova EMA 50
             '200_week_moving_average': ma_200_week,
             '200_week_moving_average_slope': calculate_slope(data, 200),
+            '200_week_ema': calculate_exponential_moving_average(data, 200),  # Nuova EMA 200
             'fibonacci_levels': calculate_fibonacci_levels(data),
             #'rsi': calculate_rsi(data, 14),
             #'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
