@@ -30,6 +30,9 @@ def perform_calculations(data):
             '200_week_moving_average_slope': calculate_slope(data, 200),
             '200_week_ema': calculate_exponential_moving_average(data, 200),  # Nuova EMA 200
             'fibonacci_levels': calculate_fibonacci_levels(data),
+            'rsi': calculate_rsi(data, 14),
+            'macd': calculate_macd(data),
+            'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
             #'rsi': calculate_rsi(data, 14),
             #'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
             #'macd': calculate_macd(data, 12, 26, 9), 
