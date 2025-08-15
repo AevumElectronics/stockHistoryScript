@@ -25,6 +25,7 @@ def perform_calculations(data):
         is_interesting = any(price < ma_200_week for price in ([current_price] + recent_prices)) if ma_200_week else False
         
         return {
+            'current_price': current_price,
             '50_week_moving_average': calculate_moving_average(data, 50),
             '50_week_moving_average_slope': calculate_slope(data, 50),
             '50_week_ema': calculate_exponential_moving_average(data, 50),  # Nuova EMA 50
@@ -34,10 +35,7 @@ def perform_calculations(data):
             'fibonacci_levels': calculate_fibonacci_levels(data),
             'rsi': calculate_rsi(data, 14),
             'macd': calculate_macd(data),
-            'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
-            #'rsi': calculate_rsi(data, 14),
-            #'bollinger_bands': calculate_bollinger_bands(data, 20, 2),
-            #'macd': calculate_macd(data, 12, 26, 9), 
+            'bollinger_bands': calculate_bollinger_bands(data, 20, 2), 
             #'pivot_points': calculate_pivot_points(data),
             'isInteresting': is_interesting
         }
