@@ -10,12 +10,20 @@
     },
     "values": [
         {
+            "datetime": "2025-08-15",
+            "open": "74.26000",
+            "high": "74.53300",
+            "low": "68.77200",
+            "close": "71.059998",
+            "volume": "10567600"
+        },
+        {
             "datetime": "2025-08-14",
             "open": "77.19000",
             "high": "78.54000",
             "low": "71.85000",
             "close": "73.66000",
-            "volume": "11477076"
+            "volume": "12116100"
         },
         {
             "datetime": "2025-08-13",
@@ -23,7 +31,7 @@
             "high": "83.60000",
             "low": "75.60200",
             "close": "77.42000",
-            "volume": "18865000"
+            "volume": "18898300"
         },
         {
             "datetime": "2025-08-12",
@@ -2580,17 +2588,36 @@
     ],
     "status": "ok",
     "calculated": {
-        "50_week_moving_average": 64.05,
-        "50_week_moving_average_slope": -54.4256,
+        "current_price": 14.83,
+        "50_week_moving_average": 64.49,
+        "50_week_moving_average_slope": -54.865,
+        "50_week_ema": 9.26,
         "200_week_moving_average": null,
-        "200_week_moving_average_slope": -21.0498,
+        "200_week_moving_average_slope": -21.3095,
+        "200_week_ema": 19.79,
         "fibonacci_levels": {
             "0.0%": 85.35,
             "23.6%": 66.47,
             "38.2%": 54.79,
             "50.0%": 45.35,
             "61.8%": 35.91,
-            "100.0%": 5.35
+            "100.0%": 5.35,
+            "123.6%": -13.53,
+            "138.2%": -25.21,
+            "161.8%": -44.09,
+            "200.0%": -74.65,
+            "261.8%": -124.09
+        },
+        "rsi": 61.02,
+        "macd": {
+            "macd_line": 1.23,
+            "signal_line": 0.08,
+            "histogram": 1.15
+        },
+        "bollinger_bands": {
+            "middle_band": 10.9,
+            "upper_band": 16.85,
+            "lower_band": 4.95
         },
         "isInteresting": false
     }
