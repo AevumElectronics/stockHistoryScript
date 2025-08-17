@@ -10,12 +10,20 @@
     },
     "values": [
         {
+            "datetime": "2025-08-15",
+            "open": "83.74000",
+            "high": "83.74000",
+            "low": "81.89000",
+            "close": "82.24000",
+            "volume": "2024600"
+        },
+        {
             "datetime": "2025-08-14",
             "open": "84.12000",
             "high": "84.12000",
-            "low": "83.23500",
+            "low": "83.24000",
             "close": "83.67000",
-            "volume": "1241671"
+            "volume": "1283900"
         },
         {
             "datetime": "2025-08-13",
@@ -8000,30 +8008,41 @@
             "low": "90.59000",
             "close": "92.089996",
             "volume": "1030500"
-        },
-        {
-            "datetime": "2021-08-20",
-            "open": "89",
-            "high": "90.76000",
-            "low": "88.69000",
-            "close": "90.59000",
-            "volume": "1109600"
         }
     ],
     "status": "ok",
     "calculated": {
-        "50_week_moving_average": 78.75,
-        "50_week_moving_average_slope": 9.6954,
-        "200_week_moving_average": 63.01,
-        "200_week_moving_average_slope": 6.2707,
+        "current_price": 82.24,
+        "50_week_moving_average": 78.97,
+        "50_week_moving_average_slope": 9.4172,
+        "50_week_ema": 87.45,
+        "200_week_moving_average": 63.0,
+        "200_week_moving_average_slope": 6.0549,
+        "200_week_ema": 75.39,
         "fibonacci_levels": {
             "0.0%": 96.49,
             "23.6%": 83.06,
             "38.2%": 74.75,
             "50.0%": 68.03,
             "61.8%": 61.31,
-            "100.0%": 39.57
+            "100.0%": 39.57,
+            "123.6%": 26.14,
+            "138.2%": 17.83,
+            "161.8%": 4.39,
+            "200.0%": -17.35,
+            "261.8%": -52.53
         },
-        "isInteresting": false
+        "rsi": 51.49,
+        "macd": {
+            "macd_line": 3.03,
+            "signal_line": 4.5,
+            "histogram": -1.47
+        },
+        "bollinger_bands": {
+            "middle_band": 93.23,
+            "upper_band": 96.62,
+            "lower_band": 89.84
+        },
+        "isInteresting": true
     }
 }
