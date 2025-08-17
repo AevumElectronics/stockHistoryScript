@@ -15,8 +15,10 @@ def perform_calculations(data):
 
     try:
         # Get the latest price and last 10 days' prices
-        current_price = float(data['values'][-1]['close'])
-        recent_prices = [float(entry['close']) for entry in data['values'][-10:]]
+        #current_price = float(data['values'][-1]['close'])
+        #recent_prices = [float(entry['close']) for entry in data['values'][-10:]]
+        current_price = float(data['values'][0]['close'])
+        recent_prices = [float(entry['close']) for entry in data['values'][10:]]
 
         # Calculate 200-week moving average
         ma_200_week = calculate_moving_average(data, 200 * 5)
