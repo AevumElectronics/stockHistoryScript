@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2025-08-18",
+            "open": "42.14000",
+            "high": "42.40000",
+            "low": "41.39000",
+            "close": "41.75",
+            "volume": "6848947"
+        },
+        {
             "datetime": "2025-08-15",
             "open": "42.70000",
             "high": "42.80000",
@@ -8000,25 +8008,17 @@
             "low": "34.80000",
             "close": "35.21000",
             "volume": "15470700"
-        },
-        {
-            "datetime": "2021-08-23",
-            "open": "33.70000",
-            "high": "34.40000",
-            "low": "33.63000",
-            "close": "34.20000",
-            "volume": "16189600"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 42.36,
+        "current_price": 41.75,
         "50_week_moving_average": 42.93,
-        "50_week_moving_average_slope": -7.654,
-        "50_week_ema": 35.59,
-        "200_week_moving_average": 39.97,
-        "200_week_moving_average_slope": 0.2587,
-        "200_week_ema": 41.13,
+        "50_week_moving_average_slope": -7.5682,
+        "50_week_ema": 35.7,
+        "200_week_moving_average": 39.98,
+        "200_week_moving_average_slope": 0.3236,
+        "200_week_ema": 41.16,
         "fibonacci_levels": {
             "0.0%": 55.24,
             "23.6%": 48.06,
@@ -8032,16 +8032,16 @@
             "200.0%": -5.64,
             "261.8%": -24.45
         },
-        "rsi": 45.4,
+        "rsi": 50.16,
         "macd": {
-            "macd_line": 1.56,
-            "signal_line": 1.67,
-            "histogram": -0.11
+            "macd_line": 1.57,
+            "signal_line": 1.47,
+            "histogram": 0.1
         },
         "bollinger_bands": {
-            "middle_band": 35.17,
-            "upper_band": 37.84,
-            "lower_band": 32.5
+            "middle_band": 34.98,
+            "upper_band": 38.33,
+            "lower_band": 31.63
         },
         "isInteresting": true
     }
