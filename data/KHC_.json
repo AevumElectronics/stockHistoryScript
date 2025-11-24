@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2025-11-24",
+            "open": "25.29000",
+            "high": "25.3",
+            "low": "24.99000",
+            "close": "25.21000",
+            "volume": "11533687"
+        },
+        {
             "datetime": "2025-11-21",
             "open": "25.070000",
             "high": "25.53500",
@@ -8000,25 +8008,17 @@
             "low": "32.82000",
             "close": "32.88000",
             "volume": "12204500"
-        },
-        {
-            "datetime": "2021-11-30",
-            "open": "34.64000",
-            "high": "34.70000",
-            "low": "33.50500",
-            "close": "33.61000",
-            "volume": "15110300"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 25.29,
-        "50_week_moving_average": 25.3,
-        "50_week_moving_average_slope": 10.3534,
-        "50_week_ema": 35.84,
-        "200_week_moving_average": 34.5,
-        "200_week_moving_average_slope": 10.5258,
-        "200_week_ema": 38.18,
+        "current_price": 25.21,
+        "50_week_moving_average": 25.29,
+        "50_week_moving_average_slope": 10.3754,
+        "50_week_ema": 35.81,
+        "200_week_moving_average": 34.49,
+        "200_week_moving_average_slope": 10.5518,
+        "200_week_ema": 38.16,
         "fibonacci_levels": {
             "0.0%": 44.87,
             "23.6%": 39.87,
@@ -8032,16 +8032,16 @@
             "200.0%": 2.53,
             "261.8%": -10.55
         },
-        "rsi": 39.94,
+        "rsi": 31.91,
         "macd": {
-            "macd_line": -1.14,
+            "macd_line": -1.0,
             "signal_line": -1.1,
-            "histogram": -0.04
+            "histogram": 0.1
         },
         "bollinger_bands": {
-            "middle_band": 34.52,
-            "upper_band": 36.35,
-            "lower_band": 32.69
+            "middle_band": 34.63,
+            "upper_band": 36.49,
+            "lower_band": 32.77
         },
         "isInteresting": true
     }
