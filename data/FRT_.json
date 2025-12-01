@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2025-12-01",
+            "open": "98.010002",
+            "high": "99.13",
+            "low": "98",
+            "close": "98.32000",
+            "volume": "388570"
+        },
+        {
             "datetime": "2025-11-28",
             "open": "98.72000",
             "high": "99.31000",
@@ -8000,25 +8008,17 @@
             "low": "130.49001",
             "close": "131.72000",
             "volume": "482300"
-        },
-        {
-            "datetime": "2021-12-06",
-            "open": "129.23000",
-            "high": "132.10001",
-            "low": "128.089996",
-            "close": "130.039993",
-            "volume": "523700"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 98.73,
-        "50_week_moving_average": 98.12,
-        "50_week_moving_average_slope": 31.0304,
-        "50_week_ema": 128.09,
-        "200_week_moving_average": 103.73,
-        "200_week_moving_average_slope": 17.9404,
-        "200_week_ema": 111.99,
+        "current_price": 98.32,
+        "50_week_moving_average": 98.1,
+        "50_week_moving_average_slope": 30.8498,
+        "50_week_ema": 127.81,
+        "200_week_moving_average": 103.7,
+        "200_week_moving_average_slope": 17.81,
+        "200_week_ema": 111.77,
         "fibonacci_levels": {
             "0.0%": 140.51,
             "23.6%": 126.38,
@@ -8032,16 +8032,16 @@
             "200.0%": 20.79,
             "261.8%": -16.2
         },
-        "rsi": 48.15,
+        "rsi": 53.07,
         "macd": {
-            "macd_line": -3.91,
-            "signal_line": -0.89,
-            "histogram": -3.02
+            "macd_line": -3.67,
+            "signal_line": 0.07,
+            "histogram": -3.74
         },
         "bollinger_bands": {
-            "middle_band": 131.88,
-            "upper_band": 137.95,
-            "lower_band": 125.81
+            "middle_band": 132.35,
+            "upper_band": 139.17,
+            "lower_band": 125.53
         },
         "isInteresting": true
     }
