@@ -10,12 +10,20 @@
     },
     "values": [
         {
+            "datetime": "2025-12-31",
+            "open": "26.47000",
+            "high": "26.54500",
+            "low": "26.27",
+            "close": "26.27500",
+            "volume": "1945564"
+        },
+        {
             "datetime": "2025-12-30",
             "open": "26.89000",
             "high": "26.96000",
-            "low": "26.42",
-            "close": "26.47000",
-            "volume": "1993816"
+            "low": "26.42000",
+            "close": "26.46000",
+            "volume": "2662700"
         },
         {
             "datetime": "2025-12-29",
@@ -8000,25 +8008,17 @@
             "low": "23.76000",
             "close": "24.14000",
             "volume": "3198800"
-        },
-        {
-            "datetime": "2022-01-05",
-            "open": "24.44000",
-            "high": "24.83000",
-            "low": "23.65000",
-            "close": "23.69000",
-            "volume": "4069800"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 26.47,
-        "50_week_moving_average": 24.63,
-        "50_week_moving_average_slope": -2.522,
-        "50_week_ema": 21.74,
+        "current_price": 26.275,
+        "50_week_moving_average": 24.7,
+        "50_week_moving_average_slope": -2.6363,
+        "50_week_ema": 21.71,
         "200_week_moving_average": 17.61,
-        "200_week_moving_average_slope": -0.7123,
-        "200_week_ema": 18.21,
+        "200_week_moving_average_slope": -0.8104,
+        "200_week_ema": 18.16,
         "fibonacci_levels": {
             "0.0%": 27.48,
             "23.6%": 23.73,
@@ -8032,16 +8032,16 @@
             "200.0%": -4.28,
             "261.8%": -14.09
         },
-        "rsi": 54.64,
+        "rsi": 59.31,
         "macd": {
-            "macd_line": 0.83,
-            "signal_line": -0.14,
-            "histogram": 0.97
+            "macd_line": 0.58,
+            "signal_line": -0.23,
+            "histogram": 0.81
         },
         "bollinger_bands": {
-            "middle_band": 23.12,
-            "upper_band": 25.69,
-            "lower_band": 20.55
+            "middle_band": 23.05,
+            "upper_band": 25.63,
+            "lower_band": 20.47
         },
         "isInteresting": true
     }
