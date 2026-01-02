@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-01-02",
+            "open": "133.23000",
+            "high": "136.39",
+            "low": "132.67999",
+            "close": "135.84000",
+            "volume": "1515026"
+        },
+        {
             "datetime": "2025-12-31",
             "open": "135.35001",
             "high": "135.50999",
@@ -8000,25 +8008,17 @@
             "low": "95.61000",
             "close": "95.69000",
             "volume": "2863600"
-        },
-        {
-            "datetime": "2022-01-06",
-            "open": "95.91000",
-            "high": "96.89000",
-            "low": "95.27000",
-            "close": "96.23000",
-            "volume": "2477000"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 132.72,
-        "50_week_moving_average": 133.15,
-        "50_week_moving_average_slope": -39.099,
-        "50_week_ema": 93.88,
-        "200_week_moving_average": 103.88,
-        "200_week_moving_average_slope": -39.4741,
-        "200_week_ema": 86.23,
+        "current_price": 135.84,
+        "50_week_moving_average": 133.23,
+        "50_week_moving_average_slope": -39.133,
+        "50_week_ema": 93.99,
+        "200_week_moving_average": 103.92,
+        "200_week_moving_average_slope": -39.6557,
+        "200_week_ema": 86.18,
         "fibonacci_levels": {
             "0.0%": 150.27,
             "23.6%": 131.9,
@@ -8032,16 +8032,16 @@
             "200.0%": -5.45,
             "261.8%": -53.57
         },
-        "rsi": 55.79,
+        "rsi": 53.84,
         "macd": {
-            "macd_line": 0.31,
-            "signal_line": -1.09,
-            "histogram": 1.4
+            "macd_line": -0.17,
+            "signal_line": -1.02,
+            "histogram": 0.85
         },
         "bollinger_bands": {
-            "middle_band": 94.41,
-            "upper_band": 99.29,
-            "lower_band": 89.53
+            "middle_band": 94.37,
+            "upper_band": 99.2,
+            "lower_band": 89.54
         },
         "isInteresting": true
     }

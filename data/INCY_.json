@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-01-02",
+            "open": "98.25",
+            "high": "101.49000",
+            "low": "97.94000",
+            "close": "101.42000",
+            "volume": "1438211"
+        },
+        {
             "datetime": "2025-12-31",
             "open": "98.43000",
             "high": "99.89000",
@@ -8000,25 +8008,17 @@
             "low": "72.69000",
             "close": "73.19000",
             "volume": "2531700"
-        },
-        {
-            "datetime": "2022-01-06",
-            "open": "70.81000",
-            "high": "72.69000",
-            "low": "70.44000",
-            "close": "72.63000",
-            "volume": "1997700"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 98.77,
-        "50_week_moving_average": 99.69,
-        "50_week_moving_average_slope": -27.9398,
-        "50_week_ema": 71.52,
-        "200_week_moving_average": 70.31,
-        "200_week_moving_average_slope": -5.1201,
-        "200_week_ema": 73.48,
+        "current_price": 101.42,
+        "50_week_moving_average": 99.97,
+        "50_week_moving_average_slope": -28.1432,
+        "50_week_ema": 71.67,
+        "200_week_moving_average": 70.34,
+        "200_week_moving_average_slope": -5.328,
+        "200_week_ema": 73.47,
         "fibonacci_levels": {
             "0.0%": 109.28,
             "23.6%": 95.35,
@@ -8032,16 +8032,16 @@
             "200.0%": -8.74,
             "261.8%": -45.21
         },
-        "rsi": 46.86,
+        "rsi": 49.51,
         "macd": {
-            "macd_line": 1.91,
-            "signal_line": 3.09,
-            "histogram": -1.18
+            "macd_line": 2.35,
+            "signal_line": 3.27,
+            "histogram": -0.92
         },
         "bollinger_bands": {
             "middle_band": 74.11,
-            "upper_band": 75.97,
-            "lower_band": 72.25
+            "upper_band": 75.96,
+            "lower_band": 72.26
         },
         "isInteresting": true
     }

@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-01-02",
+            "open": "199.7",
+            "high": "203",
+            "low": "198.55",
+            "close": "202.47",
+            "volume": "30721"
+        },
+        {
             "datetime": "2025-12-31",
             "open": "202.53000",
             "high": "202.53000",
@@ -8000,25 +8008,17 @@
             "low": "328.51999",
             "close": "328.67999",
             "volume": "549200"
-        },
-        {
-            "datetime": "2022-01-06",
-            "open": "334.010010",
-            "high": "339.57001",
-            "low": "330.17001",
-            "close": "333.94000",
-            "volume": "585000"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 199.48,
-        "50_week_moving_average": 183.58,
-        "50_week_moving_average_slope": 126.5078,
-        "50_week_ema": 302.24,
-        "200_week_moving_average": 207.08,
-        "200_week_moving_average_slope": 92.0757,
-        "200_week_ema": 239.07,
+        "current_price": 202.47,
+        "50_week_moving_average": 183.87,
+        "50_week_moving_average_slope": 125.277,
+        "50_week_ema": 301.39,
+        "200_week_moving_average": 206.95,
+        "200_week_moving_average_slope": 91.2826,
+        "200_week_ema": 238.49,
         "fibonacci_levels": {
             "0.0%": 366.01,
             "23.6%": 301.31,
@@ -8032,16 +8032,16 @@
             "200.0%": -182.29,
             "261.8%": -351.71
         },
-        "rsi": 52.12,
+        "rsi": 49.51,
         "macd": {
-            "macd_line": 4.33,
-            "signal_line": 4.31,
-            "histogram": 0.02
+            "macd_line": 2.2,
+            "signal_line": 5.88,
+            "histogram": -3.68
         },
         "bollinger_bands": {
-            "middle_band": 334.66,
-            "upper_band": 361.88,
-            "lower_band": 307.44
+            "middle_band": 334.75,
+            "upper_band": 361.97,
+            "lower_band": 307.53
         },
         "isInteresting": true
     }

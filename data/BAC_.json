@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-01-02",
+            "open": "55.03",
+            "high": "55.99",
+            "low": "54.88",
+            "close": "55.965",
+            "volume": "1755536"
+        },
+        {
             "datetime": "2025-12-31",
             "open": "55.32000",
             "high": "55.42000",
@@ -8000,25 +8008,17 @@
             "low": "48.060001",
             "close": "49.18000",
             "volume": "59082600"
-        },
-        {
-            "datetime": "2022-01-06",
-            "open": "47.98000",
-            "high": "48.16000",
-            "low": "47.19000",
-            "close": "48.13000",
-            "volume": "52040900"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 55.0,
-        "50_week_moving_average": 53.55,
-        "50_week_moving_average_slope": -8.1872,
-        "50_week_ema": 44.69,
-        "200_week_moving_average": 38.39,
-        "200_week_moving_average_slope": -10.135,
-        "200_week_ema": 36.24,
+        "current_price": 55.965,
+        "50_week_moving_average": 53.63,
+        "50_week_moving_average_slope": -8.3819,
+        "50_week_ema": 44.59,
+        "200_week_moving_average": 38.4,
+        "200_week_moving_average_slope": -10.2719,
+        "200_week_ema": 36.19,
         "fibonacci_levels": {
             "0.0%": 56.55,
             "23.6%": 49.09,
@@ -8032,15 +8032,15 @@
             "200.0%": -6.63,
             "261.8%": -26.15
         },
-        "rsi": 57.42,
+        "rsi": 65.38,
         "macd": {
-            "macd_line": -0.44,
-            "signal_line": -0.88,
-            "histogram": 0.44
+            "macd_line": -0.67,
+            "signal_line": -0.79,
+            "histogram": 0.12
         },
         "bollinger_bands": {
-            "middle_band": 46.9,
-            "upper_band": 49.83,
+            "middle_band": 46.91,
+            "upper_band": 49.85,
             "lower_band": 43.97
         },
         "isInteresting": true

@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-01-02",
+            "open": "355",
+            "high": "362.56000",
+            "low": "354.87000",
+            "close": "362.53000",
+            "volume": "381568"
+        },
+        {
             "datetime": "2025-12-31",
             "open": "359.70001",
             "high": "360",
@@ -8000,25 +8008,17 @@
             "low": "117.78000",
             "close": "118.059998",
             "volume": "717646"
-        },
-        {
-            "datetime": "2022-01-06",
-            "open": "123.12000",
-            "high": "123.16000",
-            "low": "118.66000",
-            "close": "120.050003",
-            "volume": "733253"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 353.60999,
-        "50_week_moving_average": 346.12,
-        "50_week_moving_average_slope": -228.5926,
+        "current_price": 362.53,
+        "50_week_moving_average": 346.67,
+        "50_week_moving_average_slope": -229.1746,
         "50_week_ema": 117.69,
-        "200_week_moving_average": 172.21,
-        "200_week_moving_average_slope": -189.3767,
-        "200_week_ema": 100.32,
+        "200_week_moving_average": 172.45,
+        "200_week_moving_average_slope": -190.2447,
+        "200_week_ema": 100.17,
         "fibonacci_levels": {
             "0.0%": 380.0,
             "23.6%": 309.73,
@@ -8032,16 +8032,16 @@
             "200.0%": -215.54,
             "261.8%": -399.56
         },
-        "rsi": 57.24,
+        "rsi": 54.39,
         "macd": {
-            "macd_line": -2.59,
-            "signal_line": -8.04,
-            "histogram": 5.45
+            "macd_line": -3.87,
+            "signal_line": -8.66,
+            "histogram": 4.79
         },
         "bollinger_bands": {
-            "middle_band": 112.92,
-            "upper_band": 120.85,
-            "lower_band": 104.99
+            "middle_band": 112.85,
+            "upper_band": 120.54,
+            "lower_band": 105.16
         },
         "isInteresting": true
     }
