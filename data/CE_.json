@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-01-05",
+            "open": "42.06",
+            "high": "43.3",
+            "low": "42.06",
+            "close": "42.58",
+            "volume": "75223"
+        },
+        {
             "datetime": "2026-01-02",
             "open": "42.54000",
             "high": "42.90000",
@@ -8000,25 +8008,17 @@
             "low": "168.17999",
             "close": "170.28999",
             "volume": "585200"
-        },
-        {
-            "datetime": "2022-01-07",
-            "open": "172.98000",
-            "high": "173.14999",
-            "low": "171.029999",
-            "close": "172.070007",
-            "volume": "713500"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 42.16,
-        "50_week_moving_average": 40.5,
-        "50_week_moving_average_slope": 112.1488,
-        "50_week_ema": 149.52,
-        "200_week_moving_average": 106.96,
-        "200_week_moving_average_slope": 83.7242,
-        "200_week_ema": 124.92,
+        "current_price": 42.58,
+        "50_week_moving_average": 40.54,
+        "50_week_moving_average_slope": 111.5382,
+        "50_week_ema": 149.08,
+        "200_week_moving_average": 106.83,
+        "200_week_moving_average_slope": 83.4171,
+        "200_week_ema": 124.55,
         "fibonacci_levels": {
             "0.0%": 175.3,
             "23.6%": 142.22,
@@ -8032,16 +8032,16 @@
             "200.0%": -105.04,
             "261.8%": -191.67
         },
-        "rsi": 68.32,
+        "rsi": 66.19,
         "macd": {
-            "macd_line": 5.92,
-            "signal_line": 4.59,
-            "histogram": 1.33
+            "macd_line": 5.14,
+            "signal_line": 4.74,
+            "histogram": 0.4
         },
         "bollinger_bands": {
-            "middle_band": 163.98,
-            "upper_band": 177.17,
-            "lower_band": 150.79
+            "middle_band": 163.13,
+            "upper_band": 176.31,
+            "lower_band": 149.95
         },
         "isInteresting": true
     }
